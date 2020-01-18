@@ -12,7 +12,7 @@ public class IntegerStack {
 	//3. Complete the steps in the push method.
 	public void push(int v) {
 		//A. create a new array that is one element larger than the member array
-		
+		int[] i = new int[ints.length+1];
 		//B. set the last element of the new array equal to the integer passed into the method
 		
 		//C. iterate through the member array and copy all the elements into the new array
@@ -23,6 +23,7 @@ public class IntegerStack {
 	
 	//4. Complete the steps in the pop method.
 	public int pop() {
+		int j = ints[ints.length];
 		//A. create an integer variable and initialize it to the
 		//   last element of the member array.
 		 int i = ints[ints.length];
