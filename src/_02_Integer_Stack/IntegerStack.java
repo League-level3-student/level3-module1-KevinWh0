@@ -25,7 +25,7 @@ public class IntegerStack {
 	public int pop() {
 		//A. create an integer variable and initialize it to the
 		//   last element of the member array.
-		
+		 int i = ints[ints.length];
 		//B. create a new array that is one element smaller than the member array
 		
 		//C. iterate through the new array and copy every element from the
@@ -34,7 +34,7 @@ public class IntegerStack {
 		//D. set the member array equal to the new array
 		
 		//E. return the variable you created in step A
-		return 0;
+		return i;
 	}
 	
 	//5. Complete the clear method to set the
