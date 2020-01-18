@@ -20,6 +20,7 @@ class IntegerStackTest {
 		assertEquals(2, is.pop());
 		assertEquals(1, is.pop());
 		assertEquals(0, is.pop());
+		
 	}
 	
 	@Test
