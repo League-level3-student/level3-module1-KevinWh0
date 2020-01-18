@@ -5,6 +5,7 @@ public class IntegerStack {
 	private int[] ints = new int[0];
 	//2. complete the constructor by initializing the member array
 	//   to a new array of length 0. This prevents null pointer exceptions.
+	
 	public IntegerStack() {
 	}
 	
