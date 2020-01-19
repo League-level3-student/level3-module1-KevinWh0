@@ -18,7 +18,7 @@ public class IntegerStack {
 		//A. create a new array that is one element larger than the member array
 		int[] i = new int[ints.length+1];
 		//B. set the last element of the new array equal to the integer passed into the method
-		i[i.length] = v;
+		i[i.length-1] = v;
 		//C. iterate through the member array and copy all the elements into the new array
 		for (int j = 0; j < ints.length; j++) {
 			i[j] = ints[j];
