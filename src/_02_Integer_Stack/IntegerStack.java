@@ -6,11 +6,12 @@ public class IntegerStack {
 	
 	
 	//1. create a private array of integers
-	private int[] ints = new int[0];
+	private int[] ints;
 	//2. complete the constructor by initializing the member array
 	//   to a new array of length 0. This prevents null pointer exceptions.
 	
 	public IntegerStack() {
+		ints = new int[0];
 	}
 	
 	//3. Complete the steps in the push method.
@@ -21,7 +22,9 @@ public class IntegerStack {
 		i[i.length-1] = v;
 		//C. iterate through the member array and copy all the elements into the new array
 		for (int j = 0; j < ints.length; j++) {
+			
 			i[j] = ints[j];
+
 		}
 		//D. set the member array equal to the new array.
 		ints = i;
@@ -29,11 +32,24 @@ public class IntegerStack {
 	
 	//4. Complete the steps in the pop method.
 	public int pop() {
+		//System.out.println("Starting pop");
 		//A. create an integer variable and initialize it to the
 		//   last element of the member array.
 		if(ints.length > 0) {
-			int i = ints[ints.length-1];
-			return i;
+			int retVal = ints[ints.length-1];
+
+			int[] i = new int[ints.length-1];
+
+			for (int j = 0; j < i.length; j++) {
+				
+				i[j] = ints[j];
+
+			}
+			
+			ints = i;
+			//System.err.println(retVal);
+			
+			return retVal;
 		}else {
 			return -1;
 		}
