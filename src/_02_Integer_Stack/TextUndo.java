@@ -4,6 +4,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -12,7 +13,11 @@ public class TextUndo implements KeyListener{
 	
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
-	JTextField text = new JTextField(10);
+	JLabel text = new JLabel();
+	
+	public static void main(String[] args) {
+		new TextUndo().createUI();
+	}
 	
 	public void createUI() {
 		frame.add(panel);
@@ -30,7 +35,7 @@ public class TextUndo implements KeyListener{
 	@Override
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("hello");
+		Text = Text + e.getKeyChar();
 	}
 
 	@Override
