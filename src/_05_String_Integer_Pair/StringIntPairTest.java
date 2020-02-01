@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+
 class StringIntPairTest {
 
 	@Test
@@ -13,6 +14,8 @@ class StringIntPairTest {
 		sip.put("TWO", 2);
 		sip.put("THREE", 3);
 		sip.put("FOUR", 4);
+		
+
 		
 		assertEquals(1, sip.get("ONE"));
 		assertEquals(2, sip.get("TWO"));
