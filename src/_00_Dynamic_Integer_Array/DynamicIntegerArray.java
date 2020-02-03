@@ -14,15 +14,20 @@ public class DynamicIntegerArray {
 	public void add(int v) {
 		//A. create and initialize a new int array to be one 
 		//   element longer than the member array
-		
+		int[] newA = new int[ints.length];
 		//B. set the last element of your new array to 
 		//   the value passed into the method
-		
+		newA[newA.length-1]  = v;
 		//C. iterate through the member array and 
 		//   copy every element from the member array 
 		//   to the new array
+		for (int i = 0; i < ints.length; i++) {
+			newA[i] = ints[i];
+		}
+		
 		
 		//D. set the member array equal to the new array.
+		ints = newA;
 	}
 	
 	//4. Complete the steps in the get method
