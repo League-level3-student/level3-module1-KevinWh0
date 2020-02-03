@@ -33,7 +33,7 @@ public class DynamicIntegerArray {
 	//4. Complete the steps in the get method
 	public int get(int location) {
 		//A. Return the value of the memeber array at the location passed in
-		return 0;
+		return ints[location];
 	}
 	
 	//5. Run the DynamicArrayTest to see if you are correct so far.
