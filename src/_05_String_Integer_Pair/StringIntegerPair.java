@@ -33,8 +33,8 @@ public class StringIntegerPair {
 		// C. create an integer array that is one element longer than values
 		int[] rVals = new int[values.length+1];
 		// D. set the last element of the new String array to the passed in key
-		rKeys[rKeys.length] = key;
-		rVals[rVals.length] = value;
+		rKeys[rKeys.length-1] = key;
+		rVals[rVals.length-1] = value;
 		// E. set the last element of the new int array to the passed in value
 
 		// F. iterate through the keys and values and copy the elements to the new
@@ -56,16 +56,20 @@ public class StringIntegerPair {
 	public int get(String key) {
 		for (int i = 0; i < keys.length; i++) {
 			if (keys[i].equals(key)) {
-				return i;
+				return values[i];
 			}
 		}
-		return 0;
+		return Integer.MIN_VALUE;
 	}
 
 	// 6. Complete the containsKey method so that it returns true if the
 	// passed in keys is contained in the keys array
 	public boolean containsKey(String key) {
-
+		for (int i = 0; i < keys.length; i++) {
+			if(keys[i].equals(key)) {
+				return true;
+			}
+		}
 		return false;
 	}
 
@@ -73,16 +77,20 @@ public class StringIntegerPair {
 	// passed in value is contained in the values array
 	public boolean containsValue(int value) {
 
-		return false;
-	}
+		for (int i = 0; i < values.length; i++) {
+			if(values[i] == value) {
+				return true;
+			}
+		}
+		return false;	}
 
 	// 8. Complete the getKeysMethod so it returns the keys as an array
 	public String[] getKeys() {
-		return null;
+		return keys;
 	}
 
 	// 9. Complete the getValues so it returns the values as an array
 	public int[] getValues() {
-		return null;
+		return values;
 	}
 }
